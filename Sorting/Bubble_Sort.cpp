@@ -3,19 +3,23 @@ using namespace std;
 
 void bubble_sort(int arr[],int size = 5)
 {
-    cout << "Befor Sorted" << '\n';
+
+    cout << "Before Sorted" << '\n';
     for(int i = 0;i < size;i++)
     {
         cout << arr[i] << " ";
     }
     for(int i = size-1;i > -1;i--)
     {
+        bool swapped = false;
         for(int j = 0;j < i;j++)
         {
             if(arr[j] > arr[j+1])
             {
                 swap(arr[j],arr[j+1]);
+                swapped = true;
             }
+            if(!swapped) break;
     }
     }
     cout << '\n' << "After Sorted"<<'\n';
@@ -23,8 +27,7 @@ void bubble_sort(int arr[],int size = 5)
     {
         cout << arr[i] << " ";
     }
-   }
-
+}
 
 int main()
 {
